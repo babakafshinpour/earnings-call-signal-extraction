@@ -1,0 +1,15 @@
+# Scraping (scrape_fool.py)
+requests
+beautifulsoup4
+
+# Inference / eval (eval_local.py, smoke_test.py) — works on Mac MPS, CPU, CUDA
+torch
+transformers
+peft
+accelerate
+datasets
+
+# Training (train.py) — A100 / CUDA only; skip on Mac
+# Unsloth pulls in bitsandbytes and trl as transitive deps.
+unsloth ; platform_system == "Linux"
+bitsandbytes ; platform_system == "Linux"
